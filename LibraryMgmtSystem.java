@@ -5,29 +5,20 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.time.LocalDate;
 import javafx.application.Application;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
+import javafx.beans.value.*;
 import javafx.event.ActionEvent;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import javafx.collections.*;
 import javafx.event.EventHandler;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
+import javafx.geometry.*;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.DatePicker;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
+import javafx.scene.image.*;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import java.sql.DriverManager;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
+import java.sql.*;
 import java.lang.String.*;
 
 public class LibraryMgmtSystem extends Application {
@@ -71,7 +62,6 @@ public class LibraryMgmtSystem extends Application {
             sql = "INSERT INTO logindemo VALUES ('19pcsa101','11/11/2000')";
             stmt.executeUpdate(sql);
             sql = "INSERT INTO logindemo VALUES ('19pcsa102','12/11/2000')";
-
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -371,7 +361,6 @@ public class LibraryMgmtSystem extends Application {
                 date2.setValue(null);
                 rMsg.setText("");
             }
-
         });
 
         //event handling for log in button in scene 1
@@ -418,7 +407,6 @@ public class LibraryMgmtSystem extends Application {
                 bMsg.setText("");
                 note.setText("");
             }
-
         });
 
         //event handling for borrow button in scene 2
@@ -427,7 +415,6 @@ public class LibraryMgmtSystem extends Application {
             public void handle(ActionEvent event) {
                 primaryStage.setScene(borrowScene);
             }
-
         });
 
         //event handling for return button in scene 2
@@ -436,7 +423,6 @@ public class LibraryMgmtSystem extends Application {
             public void handle(ActionEvent event) {
                 primaryStage.setScene(returnScene);
             }
-
         });
 
         //event handling for final borrow button
@@ -484,11 +470,9 @@ public class LibraryMgmtSystem extends Application {
                                     ps3.setInt(6, 0);
                                     int r1 = ps3.executeUpdate();
                                     System.out.println(r1 + " rows inserted into return");
-
                                 }
                             } else {
                                 bMsg.setText("Invalid Book ID");
-
                             }
 
                         } catch (Exception e) {
@@ -497,7 +481,6 @@ public class LibraryMgmtSystem extends Application {
                     } else {
                         bMsg.setText("Please choose UG or PG correctly.");
                     }
-
                 } else {
                     bMsg.setText("Please fill in the details!");
                 }
@@ -559,20 +542,16 @@ public class LibraryMgmtSystem extends Application {
                             ps2.setDate(3, bordate);
                             int rr = ps2.executeUpdate();
                             System.out.println(rr + " row deleted.");
-
                         } else {
                             rMsg.setText("Invalid Book ID for return");
                         }
                     } catch (Exception e) {
                         System.out.println(e);
                     }
-
                 } else {
                     rMsg.setText("Please fill in the details!");
                 }
-
             }
-
         });
 
         // event handling for log out button in borrow scene
