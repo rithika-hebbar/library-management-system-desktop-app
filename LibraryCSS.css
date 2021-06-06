@@ -2,7 +2,6 @@
     -fx-background-image:url("login.jpg");
     -fx-background-repeat:no-repeat;
 }
-
 .root{
     -fx-background-image:url("b4.jpeg");
     -fx-background-repeat:no-repeat;
@@ -24,7 +23,6 @@
     -fx-text-fill:black;
     -fx-stroke: black;
     -fx-stroke-width: 1;
-
 }
 .fantext{
     -fx-font-size: 18px;
@@ -33,15 +31,12 @@
     -fx-text-fill:black;
     -fx-stroke-width: 1;
 }
-
 .label{
     -fx-font-size: 20px;
     -fx-stroke: BLACK;
     -fx-text-fill:black;
     -fx-stroke-width: 1;
-
 }
-
 .text-field {
     -fx-background-color: -fx-text-box-border, -fx-background ;
     -fx-background-insets: 0, 0 0 1 0 ;
@@ -64,7 +59,6 @@
 }
 .btn{
     -fx-background-color: burlywood;
-
 }
 .outputtext{
     -fx-text-fill:white;
@@ -74,20 +68,16 @@
 .root1{
     -fx-background-image:url("login.jpg");
     -fx-background-repeat:no-repeat;
-
 }
 .brcss{
     -fx-background-color: burlywood;
-
 }
-
 .button:hover {
     -fx-scale-y: 1.1;
     -fx-scale-x: 1.1;
 }
 .broot{
     -fx-background-color:burlywood;
-
 }
 .combo-box{
     -fx-background-insets: 0, 0 0 1 0 ;
@@ -102,6 +92,5 @@
     -fx-background-color:white;
     -fx-text-fill: black;
     -fx-size:27;
-
 }
 
